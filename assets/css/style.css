@@ -1,64 +1,129 @@
+/* ===== Загальні налаштування ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-margin: 0;
-padding: 10px;
-display: flex;
-justify-content: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
 }
 
-
-nav ul li {
-margin: 0 15px;
+/* ===== ШАПКА ТА МЕНЮ ===== */
+header {
+  background-color: #bc002d; /* червоний прапора Японії */
+  padding: 14px 0;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
 
 nav ul li a {
-color: white;
-text-decoration: none;
-font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
-
 
 nav ul li a:hover {
-text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
-
+/* ===== ОСНОВНИЙ БЛОК ===== */
 main {
-padding: 20px;
-max-width: 900px;
-margin: auto;
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== ЗАГОЛОВКИ ===== */
+h1 {
+  text-align: center;
+  color: #bc002d;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #bc002d;
+  margin-top: 30px;
+}
+
+/* ===== СПИСКИ ===== */
+.info-list {
+  list-style: none;
+  padding: 0;
+}
 
 .info-list li {
-margin-bottom: 10px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  background-color: #f2f2f2;
+  border-left: 6px solid #bc002d;
+  border-radius: 4px;
 }
 
+section ul li {
+  margin-bottom: 8px;
+}
 
+/* ===== ТАБЛИЦІ ===== */
 table {
-width: 100%;
-border-collapse: collapse;
-margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
 }
 
-
-table, th, td {
-border: 1px solid #bc002d;
+table th {
+  background-color: #bc002d;
+  color: white;
+  padding: 12px;
+  text-align: center;
 }
 
-
-th {
-background-color: #f4c2c2;
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 
-
-th, td {
-padding: 10px;
-text-align: left;
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-
+/* ===== ВИСНОВОК ===== */
 .conclusion {
-margin-top: 20px;
-font-weight: bold;
+  margin-top: 30px;
+  padding: 18px;
+  background-color: #fff5f5;
+  border-left: 6px solid #bc002d;
+  font-weight: bold;
+  border-radius: 4px;
 }
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main {
+    margin: 15px;
+    padding: 20px;
+  }
+}
+
